@@ -1,20 +1,24 @@
-# This entrypoint file to be used in development. Start by reading README.md
 from unittest import main
-
 import shape_calculator
 
+#Constructor
 rect = shape_calculator.Rectangle(4, 3)
-"""print(rect.get_area())
-rect.set_width(3)
-print(rect.get_perimeter())
-print(rect)"""
-
 sq = shape_calculator.Square(2)
-"""print(sq.get_area())
+
+# To string
+print(rect)
+print(sq)
+
+print("\nRectangle area:" + str(rect.get_area()))
+print("\nSquare area:" + str(sq.get_area()))
+
+rect.set_width(5)
+print("\nRectangle perimeter:" + str(rect.get_perimeter()))
+
 sq.set_side(4)
-print(sq.get_diagonal())
-print(sq) """
+print("\nSquare diagonal:" + str(sq.get_diagonal()))
 
-
-# Run unit tests automatically
-main(module='test_module', exit=False)
+print("\n Square picture:")
+print(sq.get_picture())
+print("\n Rectangle picture:")
+print(rect.get_picture())
